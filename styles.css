@@ -1,0 +1,238 @@
+:root{
+
+    /* Primary colors */
+    --light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Neutral colors */
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Gradients */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Fonts */
+    font-family: 'Hanken Grotesk', sans-serif;
+
+
+}
+
+h1{
+    font-size: 1.25rem;
+    margin: 0;
+}
+h3{
+    margin: 0;
+}
+p {
+    font-size: 18px;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 95vh;
+
+    /* background-color: red; */
+}
+
+
+.results-card{
+    background:linear-gradient(to top,hsl(241, 81%, 54%), hsl(252, 100%, 67%) );
+    border-radius: 1rem;
+    
+    position: relative;
+
+    color: white;
+    text-align: center;
+    z-index: 0;
+    width: 250px;
+    height: 350px;
+    padding: 1.5rem 1.5rem 3.5rem 1.5rem;
+}
+
+.circle{
+    background: linear-gradient(to bottom,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0)  );
+
+    position: absolute;
+    transform: translate(28%, 33%);
+
+    z-index: 1;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+
+.results-card-content{
+    /* background:red; */
+    border-radius: 1rem;
+
+    position: relative;
+
+    color: white;
+    text-align: center;
+
+    z-index: 2;
+    width: 250px;
+    height: 350px;
+    padding: 1.5rem 1.5rem 3.5rem 1.5rem;
+    margin: -1.5rem;
+}
+
+.results-card-content h1{
+    color: var(--Light-lavender);
+    padding-top: 0.5rem;
+}
+
+.results-card-content h2{
+    font-size: 3rem;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+}
+
+.results-card-content h3{
+    font-weight: 500;
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+}
+
+.results-card-content p {
+    color: var(--Light-lavender);
+    margin: 0;
+}
+
+
+
+.score-container{
+    margin: 0;
+    padding: 3.25rem 1rem;
+}
+
+.summary-card{
+    background-color: white;
+    border-radius: 1rem;
+
+    text-align: left;
+
+    width: 250px;
+    height: 350px;
+    padding: 1.5rem 1rem 3.5rem 1.5rem;
+}
+
+.summary-card h1{
+    padding: 0.5rem 0 0.25rem 0;
+}
+
+.reaction, .memory, .verbal, .visual{
+    /* background: var(--Orangey-yellow); */
+    font-weight: 700;
+
+    border-radius: 0.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0rem 1rem 0;
+    padding: 0.75rem 0.75rem;
+}
+.icons{
+    display: inline-block;
+    position: relative;
+    transform: translate(0%, 15%);
+}
+
+.icons img{
+    padding-right: 5px;
+}
+
+.skill-score{
+    color: black;
+}
+.skill-score-max{
+    color: var(--Light-lavender);
+}
+
+.reaction{
+    background:hsla(0, 100%, 67%, 0.05);
+    color: var(--light-red);
+}
+.memory{
+    background:hsla(39, 100%, 56%, 0.05);
+    color: var(--Orangey-yellow);
+}
+.verbal{
+    background:hsla(166, 100%, 37%, 0.05);
+    color: var(--Green-teal);
+}
+.visual{
+    background:hsla(234, 85%, 45%, 0.05);
+    color: var(--Cobalt-blue);
+}
+
+button{
+    all: unset;
+    background: var(--Dark-gray-blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    border-radius: 25px;
+
+
+    margin: auto;
+    padding: .75rem 5rem;
+}
+
+button:hover{
+    all: unset;
+    cursor: pointer;
+    background:linear-gradient(to top,hsl(241, 81%, 54%), hsl(252, 100%, 67%) );
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    border-radius: 25px;
+
+
+    margin: auto;
+    padding: .75rem 5rem;
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        width: 100%;
+        height: 90vh;
+    }
+
+    .results-card{
+        padding: 1.5rem 4rem 3.5rem 4rem;
+    }
+
+    .results-card .results-card-content{
+        height: 300px;
+        width: 100%;
+    }
+
+    .attribution{
+        display: none;
+    }
+
+}
